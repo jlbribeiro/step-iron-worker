@@ -1,8 +1,6 @@
 step-iron-worker
 ================
 
-[![wercker status](https://app.wercker.com/status/e6bc39b923c3696badc8797829c9d505/m/ "wercker status")](https://app.wercker.com/project/bykey/e6bc39b923c3696badc8797829c9d505)
-
 # Iron Worker Step
 
 Use the Iron Worker CLI to run, upload, queue and schedule workers in Iron.io. More info [here](http://dev.iron.io/worker/reference/cli/). This step assumes the iron.json and my_worker.worker files exist in the current executing direcotry.
@@ -18,7 +16,7 @@ Use the Iron Worker CLI to run, upload, queue and schedule workers in Iron.io. M
 ``` yaml
 deploy:
     steps:
-        - nimajalali/iron-worker:
+        - jlbribeiro/iron-worker:
             worker-name: my_worker
             cmd: upload
         	args: --env development --max-concurrency 10

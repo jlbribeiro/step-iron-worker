@@ -22,10 +22,8 @@ if ! type iron_worker &> /dev/null ;
 then
     info 'iron worker cli not found, installing it'
     
-    sudo apt-get update
     sudo apt-get install -y ruby1.9.1
-    sudo gem install typhoeus
-    sudo gem install iron_worker_ng
+    sudo gem install iron_worker_ng --no-rdoc --no-ri
 
     info 'finished iron worker cli installation';
 else
